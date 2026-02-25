@@ -1,8 +1,8 @@
-# PEOPLE COUNTING SYSTEM USING YOLO (DemNguoi2)
+# PEOPLE COUNTING SYSTEM USING YOLO
 
 ## 📌 Overview
 
-**DemNguoi2** is a computer vision project for **counting people passing through a defined area** using **YOLO (Ultralytics)** combined with **OpenCV** and **object tracking (BoT-SORT)**.
+**person-counter-system** is a computer vision project for **counting people passing through a defined area** using **YOLO (Ultralytics)** combined with **OpenCV** and **object tracking (BoT-SORT)**.
 
 The system supports:
 
@@ -30,7 +30,7 @@ The system supports:
 ## 📂 Project Structure
 
 ```
-DemNguoi2/
+person-counter-system/
 │── main.py              # Main application (GUI + inference)
 │── train.ipynb          # YOLO training notebook
 │── best.pt              # Custom-trained YOLO model (optional)
