@@ -16,7 +16,7 @@ pause = False
 confidence_threshold = 0.2  # Mặc định 20%
 detection_mode = "vertical"
 
-# --- THAY ĐỔI QUAN TRỌNG: Đặt mặc định là model của bạn ---
+# --- THAY ĐỔI QUAN TRỌNG: Đặt mặc định là ---
 model_path = "best.pt" 
 
 def update_threshold(value):
@@ -163,7 +163,7 @@ def process_video(video_path):
                     cv2.putText(img, text, pos, cv2.FONT_HERSHEY_SIMPLEX, scale, color, 2)
 
                 # Dòng 1: Tổng lượt (Màu Đỏ - Red) - Scale 0.8 (Nhỏ hơn cũ 1.5)
-                draw_text_transparent(frame_show, f'TONG LUOT: {total_entered}', (30, 50), (0, 0, 255), scale=0.8)
+                # draw_text_transparent(frame_show, f'TONG LUOT: {total_entered}', (30, 50), (0, 0, 255), scale=0.8)
                 
                 # Dòng 2: Hiện tại (Màu Xanh Lá - Green)
                 draw_text_transparent(frame_show, f'HIEN TAI: {current_count_in_zone}', (30, 90), (0, 255, 0), scale=0.8)
@@ -267,7 +267,7 @@ Label(root, text="Chọn Model YOLO:", bg="#f0f0f0").pack(pady=(20, 5))
 # Thêm "Mô hình tự train (best.pt)" vào danh sách
 model_options = ["Mô hình tự train (best.pt)", "yolo11n", "yolo11s", "yolo11m"]
 combo = ttk.Combobox(root, values=model_options, state="readonly", width=30)
-combo.set("Mô hình tự train (best.pt)") # Đặt mặc định là cái bạn vừa train
+combo.set("Mô hình tự train (best.pt)") 
 combo.pack(pady=5)
 
 def on_select(event):
@@ -275,7 +275,7 @@ def on_select(event):
     selected = combo.get()
     
     if selected == "Mô hình tự train (best.pt)":
-        model_path = "best.pt"  # Trỏ vào file best.pt của bạn
+        model_path = "best.pt"
     elif selected == "yolo11n":
         model_path = "yolo11n.pt"
     elif selected == "yolo11s":
